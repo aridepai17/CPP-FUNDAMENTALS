@@ -1,0 +1,22 @@
+malloc()
+-> malloc() is a function.
+-> Requires size during allocation.
+-> Cannot initialize memory.
+-> Cannot call constructors.
+-> Returns void pointer that need to be type casted.
+-> Cannot be customized.
+-> malloc(), calloc() and realloc() all return void pointers.
+-> malloc() returns NULL on failure.
+
+new
+-> new is an operator.
+-> Size is ascertained from the type.
+-> Can initialize memory.
+-> Can call constructors.
+-> Returns correct type of pointer.
+-> Can be customized through overloading.
+-> Has different forms.
+-> new throws exception on failure.
+
+In conclusion, new is SUPERIOR to malloc() in every way and is THE BEST option and we should NEVER use
+malloc() in C++.
