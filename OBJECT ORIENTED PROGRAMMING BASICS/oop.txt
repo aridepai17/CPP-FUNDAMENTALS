@@ -1,0 +1,38 @@
+OBJECT ORIENTED PROGRAMMING
+-> Simulate interactions of objects in real world systems.
+-> Allows representation of objects in problem domain as software objects.
+-> Decreases complextiy of softwares systems.
+-> Make code reusable, extensible and maintainable.
+
+OBJECT MODEL
+1.ABSTRACTION 
+-> Focuses on important and necessary information.
+-> Unwanted features are left out.
+-> Helps focus on important characteristics.
+-> Represened through a class, struct, interface , union or enum.
+
+2.ENCAPSULATION
+-> Hides the implementations details of a class.
+-> The class provides behaviour without revealing the implementation details.
+-> Objects of such classes are easy to use.
+
+3.INHERITANCE
+-> Represents hierarchy of classes.
+-> The relation is due same behaviour of classes.
+eg: A dog is an animal.
+-> The behaviour and its implementation is inherited by the children from the parent.
+-> The child classes may then reuse the behaviour with the same implementation or provide a different implementation.
+-> Promotes reuse and extensibility.
+
+COMPOSITION
+-> Promotes reuse of objects.
+-> Represented as has-a or part-of relationship
+eg: Car has an engine.
+
+4.POLYMORPHISM
+-> Means different forms.
+-> Represents common behaviour wiht different implementations.
+-> Response will be different for each object, either based on its class or the arguments.
+-> Implemented through function overloading, templates and virtual functions.
+-> Used in conjunction with inheritance and composition.
+-> Promotes reuse, scalability and extensibility.
