@@ -1,0 +1,7 @@
+STRUCTURES
+-> Creates a user-defined type through keyword struct 
+-> Similar to class
+-> Default access is public
+-> Frequently used to represent:
+    -> Simple abstract types such as point, vector3D, etc.
+    -> For implementing function objects.
