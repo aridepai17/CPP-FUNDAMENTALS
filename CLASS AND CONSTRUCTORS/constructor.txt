@@ -1,0 +1,27 @@
+CONSTRUCTOR
+-> Special function that is invoked autormaticallly during instantiation.
+-> Used for initialization.
+-> Can be overloaded.
+-> Doesnt have return type.
+
+TYPES OF CONSTRUCTORS
+
+1. Default Constructor
+-> Constructor with no arguments.
+eg: Car c; // Invokes default constructor.
+-> Automatically synthesized by compiler if no other user defined constructor is present.
+
+2. Parameterized Constructor
+-> Constructor with arguments.
+-> Used to initialize the object iwth user defined values.
+-> Never synthesized by compiler.
+-> Blocks auto generation of default constructor.
+eg: Car c(10); // Invokes parameterized constructor.
+
+3. Destructor
+-> Function that is invoked automatically whne an object is destroyed.
+-> Used for releasing resources that may have been allocated in the constructor.
+-> Cannot be overloaded.
+-> No arguments.
+
+

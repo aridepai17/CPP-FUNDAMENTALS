@@ -1,0 +1,26 @@
+CLASS
+-> Blueprint/template/recipe.
+-> Represents an abstraction.
+-> Every object is instantiated.
+-> Instance of a class is called object.
+-> Class can have multiple instances.
+-> Objects of a class are independent.
+
+SYNTAX
+class <name>{
+    // members are private by default
+    <modifiers>:
+        <member variables>
+        <member functions>
+};
+
+EXAMPLE
+class Car{
+    private:
+        int fuel;
+        float speed;
+        int passengers;
+    public:
+    void FillFuel(float amount);
+    void Accelerate();
+}
