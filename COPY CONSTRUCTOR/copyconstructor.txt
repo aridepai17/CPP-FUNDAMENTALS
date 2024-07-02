@@ -1,0 +1,16 @@
+COPY CONSTRUCTOR
+-> Creates a copy of an object.
+-> Synthesized automatically.
+-> Default implementation copies values.
+-> User-defined implementation required for pointer members.
+
+RULE OF 3
+-> All should be defined if a user implements any of them.
+    -> Destructor.
+    -> Copy constructor.
+    -> Copy assignment operator.
+-> This will bedur to allocation of some resource in constructor.
+    -> Destructor will free the resource.
+    -> Copy constructor will perform a deep copy.
+    -> Copy assignment operation will also perform a deep copy.
+-> Not implementing user defined operations can lead to memory leak or shallow copy.
