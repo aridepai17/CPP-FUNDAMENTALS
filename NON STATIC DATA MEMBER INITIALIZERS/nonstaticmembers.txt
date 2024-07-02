@@ -1,0 +1,9 @@
+NON STATIC DATA MEMBER INITIALIZERS
+-> Convienient way of initializing class members with values during declaration.
+class Class{
+    <type1><var1> {<initializer>};
+    <type2><var2> = <initializer>;
+-> Ensures the memvers intialized with valid values.
+-> Can be used to initialize any type.
+-> Compiler automatiaclly generates intialization code.
+-> initialization in a user-defined constructor takes precedence.
