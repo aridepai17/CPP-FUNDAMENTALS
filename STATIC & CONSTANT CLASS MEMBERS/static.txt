@@ -1,0 +1,24 @@
+STATIC MEMBER VARIABLES
+-> Member variables qualified with the static keyword.
+-> Not part of the object.
+-> Belong to the class.
+-> Only one copy of the member variable exists in the class.
+-> Shared between objects.
+-> Cannot be initialized inside the class.
+-> Have to be defined outside the class for initalization.
+-> Default initialization assigns default value of the type.
+
+// Car.h
+class Car{
+    static int totalCars;
+}
+// Car.cpp
+int Car::totalCars; // Default init to 0
+
+STATIC MEMBER FUNCTIONS
+-> Static member functions qualified with the static keyword.
+-> Required only in declaration.
+-> Belong to the class and not to the objects.
+-> Do not receive this pointer.
+-> Cannot access non-static members of the class.
+-> Can be invoked directly through the class name.

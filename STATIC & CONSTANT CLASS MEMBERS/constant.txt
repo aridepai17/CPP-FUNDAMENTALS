@@ -1,0 +1,7 @@
+CONSTANT MEMBER FUNCTIONS 
+-> Member functions qualified with the const keyword.
+-> Both declaration and definition is qualified.
+-> Such functions cannot change value of any memver variables.
+-> Useful for creating read-only functions.
+-> Constant objects can invoke only constant member functions.
+
