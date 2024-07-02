@@ -1,0 +1,11 @@
+this POINTER
+-> A hidden pointer passed to member function.
+-> Points to the object that invoked the member function.
+-> Provided as a keyword that is meaningful only in member functions.
+-> Can be used to access members insider the member functions.
+
+USAGE EXAMPLE
+void Car::AddPassengers(int passengers){
+    this -> passengers = passengers; 
+    // this Keyword is used to access members that have the same name.
+} 
