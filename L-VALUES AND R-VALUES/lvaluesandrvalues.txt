@@ -1,0 +1,28 @@
+L-VALUES
+-> Has a name.
+-> All variables are l-values.
+-> Can be assigned values.
+-> Some expressions returns l-values.
+-> L-value persists beyond the expression.
+-> Functions that return by reference return l-values.
+-> Reference to l-value (also called l-value reference).
+
+R-VALUES 
+-> Does not have a name.
+-> R-values are temporary values.
+-> Cannot be assigned values.
+-> Some expressions returns r-values.
+-> R-value does not persist beyond the expression.
+-> Functions that return by value return r-values.
+-> Reference to r-value (also called r-value reference).
+
+R-VALUE REFERENCE ( MOVE SEMANTICS )
+-> A reference created to a temporary.
+-> Represents a temporary.
+-> Created with && operator.
+-> Cannot point to l-values.
+-> R-value references always bind to temporaries.
+-> L-value references always bind to l-values.
+eg: int &&a = 10; // R-value reference
+    int &b = Add(3,5) // Add returns by values
+    int &&c = 3+4 // Expression returns a temporary
