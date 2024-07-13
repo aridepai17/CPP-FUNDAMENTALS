@@ -1,0 +1,17 @@
+OPERATOR OVERLOADING 
+-> Custom implementation for primitive operators.
+-> Allows usage of user-defined objects in mathematical expressions.
+-> Overloaded as functions but provide a convenient notation.
+-> Implemented as member or global functions.
+-> Require usage of the operator keyword.
+
+SYNTAX
+<ret> operator <#> (<arguments>)
+
+-> As global functions, require same number of arguments as the operands.
+-> As member functions, one operand is passed as argument through this pointer.
+    -> Binary operator will require only one explicit argument.
+    -> Unary operator will not require any explicit argument.
+
+Integer operator + ( const Integer &, ocnst Integer & ) - Global function
+Integer Integer::operator + ( const Integer & ) - Member function
