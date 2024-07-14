@@ -1,0 +1,10 @@
+TYPE CONVERSIONS
+-> Conversion between types.
+-> Performed through casts.
+-> Ordered by compiler ( implicit ) or user ( explicit ).
+-> Explicit conversion uses casting operators.
+-> Conversion between - 
+    -> basic and basic types.
+    -> basic and user-defined types.
+    -> user-defined and basic types.
+    -> user-defined and user-defined types.

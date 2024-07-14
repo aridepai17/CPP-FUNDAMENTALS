@@ -1,0 +1,5 @@
+TYPE CONVERSION OPERATOR
+SYNTAX
+    operator <type> ()
+-> No arguments
+-> No retun type
