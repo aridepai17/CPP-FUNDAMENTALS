@@ -1,0 +1,13 @@
+ENUMERATED TYPES
+-> Type created through enum keyword.
+-> Created with restricted range of values, called symbolic constants or enumereators.
+-> Enumerators are internally represented as undefined integral types.
+-> Can implicitly convert to an integer, but not the other way around.
+-> Defauly value starts from 0, but users can assign any value.
+-> Enumerators are visible in the scope in which they're defined.
+
+SYNTAX:
+enum Color(RED, GREEN, BLUE);
+Color c = RED;
+c = 1;
+int x = GREEN;
