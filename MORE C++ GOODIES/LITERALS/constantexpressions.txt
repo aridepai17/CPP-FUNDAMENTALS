@@ -1,0 +1,6 @@
+constexpr
+
+-> Represents an expression that is constant.
+-> Such expressions are possibly evaluated at compile time.
+-> Can be applied to variable decalarations or functions.
+-> May increase the performance of the code as computation is done at compile time.

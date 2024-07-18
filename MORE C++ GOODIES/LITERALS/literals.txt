@@ -1,0 +1,33 @@
+USER DEFINED LITERALS
+
+-> A literal is a fixed value that appears directly inthe code.
+-> C++ supports different types of literals.
+   -> integer, floating point, boolean, character, string.
+-> Some of these litereals can be modified through prefixes or suffixes.
+   -> 14u, 621l, 9.2f etc
+-> In C++11, we can define our own suffixes.
+   -> Can be applied to integer, floating point, character and string literals.
+-> Creating custom literals provides syntactic shortcuts and increase type safety.
+
+eg: Temperature temp { 82.5 }; // Fahrenheit or Celsius?
+    Temperature temp {82.5_F}; Use custom literals.
+
+SYNTAX
+
+<return type> operator ""_ <literal> (<arguments>)
+
+-> operator "" : defines a literal operator function.
+-> <return type> : return type of the function including void.
+-> _<literal> : always starts with _ ( underscore ) followed by a name,
+-> <arguments> : arguments to the function.
+   -> Can be integer, floating point, character or string.
+
+IMPORTANT POINTS TO REMEMBER
+
+-> Custom litereals should begin with underscore.
+-> Literals without underscore are for standard library.
+-> You cannot redefine the meaning of built-in literals suffixes.
+-> Only following types can be suffixed to make a user defined literal.
+   -> unsigned long long, long double, const char*, char
+-> Literal operator functions cannot be memever functions.
+    
