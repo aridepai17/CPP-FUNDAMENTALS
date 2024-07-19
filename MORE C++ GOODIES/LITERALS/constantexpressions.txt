@@ -4,3 +4,17 @@ constexpr
 -> Such expressions are possibly evaluated at compile time.
 -> Can be applied to variable decalarations or functions.
 -> May increase the performance of the code as computation is done at compile time.
+
+CONSTANT EXPRESSION FUNCTION RULES
+
+-> Should accept and return literal types only.
+-> Should contain only single line statement that should be a return statement.
+-> constexpr functions are implicitly inline.
+
+const VS constexpr
+
+-> Initialization of a const variable can be deferred until runtime.
+-> However, a constexpr variable must be initialized at compile time.
+-> All constexpr variables are const but not all const variables are constexpr.
+-> Use const keyword to indicate the value cannot be modified .
+-> USe constexpr keyword to create expressions that can be evaluated at compile time.
