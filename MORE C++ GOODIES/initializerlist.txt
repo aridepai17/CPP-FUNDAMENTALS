@@ -1,0 +1,8 @@
+std::initializer_list
+
+-> Lightweight proxy object that represents an array of objects.
+-> Constructed automatically from a braced list of elements.
+   -> auto, ranged for loop, constructor, function etc
+-> Not a true container, but had similar behavior.
+-> Provides access to its elements through iterators.
+-> Defined in <initializer_list> header file.
