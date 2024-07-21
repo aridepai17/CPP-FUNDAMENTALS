@@ -1,0 +1,19 @@
+OBJECT ORIENTED PROGRAMMING IN C++
+
+-> System is made up of objects.
+-> Object is instance of a class.
+-> Classes & objects are related.
+-> Collaboration between objects.
+-> Define the behaviour of the system.
+
+1. COMPOSITION
+-> Object composed in another object.
+-> Represents a "has a" relationship.
+-> Reuse behaviour of code.
+
+2. INHERITANCE
+-> Class inherits the features of another class.
+-> Reuse & inherit behaviour.
+-> Represents a "is a" relationship.
+
+SYNTAX -> class <child class> : <access modifier> <base class>

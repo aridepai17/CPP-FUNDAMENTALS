@@ -1,0 +1,16 @@
+ACCESS MODIFIERS
+
+-> Public -> Accessible outside the class
+
+-> Private -> Not accessible outside the class
+
+-> Protected -> Not accessible outside the class 
+             -> Accessible only to child classes
+
+OBJECT CONSTRUCTION
+
+-> Constructors execute from base to child.
+-> Destructors execute from child to base.
+-> Base data members will be part of child object.
+
+ 
