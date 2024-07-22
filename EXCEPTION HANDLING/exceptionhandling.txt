@@ -1,0 +1,23 @@
+EXCEPTION HANDLING
+
+-> Mechanism to handle errors in programs that occur at runtime.
+-> These errors are called exceptions.
+-> Exist outside the normal functioning of the program.
+-> Require immediate handling by the program.
+-> If not hand led, the program will crash.
+-> Cannot be ignored, unlike C error handling.
+
+MECHANISM
+
+Try Block
+-> Creates a scope/block & exception causing code appears here.
+-> Can contain other try-catch blocks.
+
+Throw Block
+-> Throws an exception from the try block.
+-> Exception is object that is constructed in throw statement.
+
+Catch Block
+-> Handler that catches the exception object.
+-> Should appear just after the try block.
+-> Multiple catch blocks can be used.
