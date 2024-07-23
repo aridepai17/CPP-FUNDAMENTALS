@@ -1,7 +1,20 @@
 #include <iostream>
 #include <limits>
+#include <memory>
+
+class Test{
+public:
+    Test(){
+        std::cout << "Constructor" << std::endl;
+    }
+
+    ~Test(){
+        std::cout << "Destructor" << std::endl;
+    }
+};
 
 int ProcessRecords(int count){
+    std::unique_ptr<Test> t(new Test());
     int *pArray = (int*)malloc(count * sizeof(int));
 
     if(count < 10)
