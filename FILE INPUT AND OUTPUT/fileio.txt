@@ -1,0 +1,17 @@
+FILE I/O
+
+-> C++ provides support for file I/O through following classes:
+    -> ofstream - write to an output stream.
+    -> ifstream - read from an input stream.
+    -> fstream - both read and write to an input stream.
+-> Include <fstream> header file to use these classes.
+-> All classes can be used for both text and binary I/O.
+-> Additionally, they support modes that decide how the file is opened and operated.
+-> is_open() function returns a boolean value indicating if a stream is open.
+
+STREAM STATE FLAGS
+
+-> goodbit -> No error -> bool good()
+-> badbit -> Irreversible error -> bool bad()
+-> failbit -> I/O operation failed -> bool fail()
+-> eofbit -> End of file reached -> bool eof()
