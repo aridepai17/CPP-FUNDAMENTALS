@@ -1,0 +1,19 @@
+std::bind
+
+-> Wrapper that can bind some arguments to a given function.
+-> The arguments to the target function are represented using placeholders or directly bound to specific values.
+-> Placeholders are represented using constant objects of unspecified type in std::placeholders namespace.
+    -> std::placeholders::_1, std::placeholders::_2, etc.
+-> Can be used to invoke a function that accepts n arguments as a function with n-m arguments.
+-> Returns a function object through which the target is invoked.
+
+
+std::bind Usage
+
+std::bind(callable, arg1, arg2, ...);
+
+int Square(int);
+void Print(const char *);
+
+auto f1 = std::bind(Square, 5); f1();
+auto f2 = std::bind(Print, "Hello"); f2();

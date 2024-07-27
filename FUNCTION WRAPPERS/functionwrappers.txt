@@ -1,0 +1,19 @@
+std::function 
+
+-> A general-purpose function wrapper.
+-> Can store and invoke and target that can be invoked with operator() syntax.
+    -> Function pointers and function objects.
+-> Stored object is called the target.
+-> This target can be invoked with the same syntax through std::fucntion object.
+-> Invocation without a target throws std::bad_function_call exception.
+
+std::function Usage
+
+std::function<function signature> object = { callable object };
+
+int Square(int);
+int *Alloc ( size_t bytes );
+
+std::function<int(int)> f1 = Square;
+std::function<int *(size_t)> f2 = Alloc;
+std::function<bool(int)> f3 = [](int x) { return x > 0; };
