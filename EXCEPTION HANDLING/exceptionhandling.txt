@@ -21,3 +21,15 @@ Catch Block
 -> Handler that catches the exception object.
 -> Should appear just after the try block.
 -> Multiple catch blocks can be used.
+
+noexcept Keyword
+
+-> Applied to functions ( both in declaration & definition).
+-> Indicates the function does not throw exceptions.
+-> Compiler can optimize the function.
+    -> No need to generate stack unwinding code.
+-> An exception from such function terminates the program.
+    -> Stack may or may not be unwound.
+-> Not all functions should use the noexcept specifier.
+    -> Especially functions calling other functions ( in library )
+    -> Such functions will be exception-neutral.
