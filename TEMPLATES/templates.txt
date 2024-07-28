@@ -1,0 +1,55 @@
+TEMPLATES 
+
+-> Generalizes software components
+-> Such components can be reused in different situations.
+-> Operate any kind of data.
+-> High performance algorithms and classes.
+-> Compile time, no runtime costs are involved.
+-> Libraries such as ATL, WTL, Boost, POCO, ACE etc use templates for implementation.
+
+FUNCTION TEMPLATES
+
+-> Function that accepts template type arguments.
+-> Always begin with template keyword.
+-> Template type argument is called type name.
+-> Type name is a placeholder for the actual type.
+-> Can accept any type.
+-> The template type can be used as return type.
+
+SYNTAX
+
+template <typename T>
+T FunctionName(T arg){
+    // Implementation
+}
+
+TEMPLATE ARGUMENT DEDUCTION
+
+-> Process of deducing the types.
+-> Each function argument is examined.
+-> The corresponding ytpe argument is deduced from the argument. 
+-> The type argument deduction should lead to same type.
+-> Type conversions are not performed.
+-> After deduction, the template is instantiated.
+-> Override deduction by specifying types in template argument list 
+    -> Max <int> (5, 6);
+
+TEMPLATE INSTANTIATION
+
+-> A template function or class only acts as a blueprint.
+-> The compiler generates code from the blueprint at compile time.
+-> Known as template instantiation.
+-> Occurs implicitly when 
+        -> A function template is invoked.
+        -> Taking address of a function template.
+        -> Using explicit instantiation.
+        -> Creating explicit specialization.
+-> Full definition oftemplate should be available.
+-> Defined in header file.
+
+NON TYPE TEMPLATE ARGUMENTS 
+
+-> Expression that is computed at compile time within a template argument list.
+-> Must be a constant expression ( addresses, references. integrals, nullptr, enums)
+-> Part of the template type.
+-> Used by std::begin and std::end functions.

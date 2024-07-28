@@ -1,0 +1,7 @@
+EXPLICIT SPECIALIZATION 
+
+-> Template specialized for a particular type.
+-> Provides correct semantics for some datatype.
+-> Or implement an algorithm optimally for a specific type.
+-> Explicitly specialized functions must be defined in a .cpp file.
+-> Primary template definition should occur before specialization.
