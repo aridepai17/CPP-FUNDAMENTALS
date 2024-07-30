@@ -1,0 +1,30 @@
+TYPE DEFINITION (typedef)
+
+-> Introduces a name for an existing type.
+-> This name become a synonym of that type.
+-> Useful to construct shorter or more meaningful names for existing types.
+-> Simplifies declaration of some types (function pointers & templates).
+-> Implementation details that may change can be encapsulated.
+-> Does not introduce a new type; only introduces a new name for existing type.
+
+TYPE ALIAS
+
+-> Creates a name that is a synonym of existing type.
+-> Does not introduce a new type.
+-> Same as a typedef declaration.
+-> Created through the using keyword.
+
+eg : using identifier = type;
+
+TYPE TRAITS
+
+-> Type traits give the ability to introspect
+    -> Find the characteristics of types at compile time.
+    -> Transform the proerties of the type.
+-> Useful in template metaprogramming.
+-> Will either return a boolean or a type when inspecting types.
+-> Provides template-based interface and defined in header <type_traits>
+-> Some traits require support from the compiler.
+    -> Compiler provides intrinsics for such traits.
+
+eg : is_void, is_null_pointer, is_integral, is_array, is_enum, is_union, is_function, is_pointer etc.

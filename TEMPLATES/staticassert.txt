@@ -1,0 +1,6 @@
+STATIC ASSERTION 
+
+-> static_assert is a new kind of declaration for evaluating expressions.
+-> Accepts a expression and a user defined message.
+-> Used for testing an expression at compile time.
+-> If the expression returns false, the ompiler displays the specified message and compilation fails.
