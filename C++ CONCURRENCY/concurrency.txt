@@ -1,0 +1,15 @@
+C++ CONCURRENCY 
+
+-> Large applications have multiple components.
+-> Some componenets may have to execute concurrently.
+-> This allows efficient usage of the CPU.
+-> This can be achieved by using multiple threads.
+-> C++ added support for concurrency.
+-> Includes utilities for starting and managing threads.
+
+std::thread
+
+-> Accepts a callable as constructor argument.
+-> The callable is executed in a separate thread.
+-> The constructor does not wait for the thread to start; it returns immediately.
+-> Resides in <thread> header.
