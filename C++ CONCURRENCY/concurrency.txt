@@ -13,3 +13,43 @@ std::thread
 -> The callable is executed in a separate thread.
 -> The constructor does not wait for the thread to start; it returns immediately.
 -> Resides in <thread> header.
+
+std::async
+
+-> Part of high level concurrency.
+-> Executes a callable object or a function in a separate thread.
+-> Returns a std::future object that provides access to the result of the callable.
+-> Include the header <future>.
+
+SYNTAX
+future<return_type> async(Callable, args...)
+future<return_type> async(launch policy, Callable, args...)
+
+LAUNCH POLICY 
+
+-> You can specify following launch policies:
+    -> std::launch::deferred - the task is executed synchronously.
+    -> std::launch::async - the task is executed asynchronously.
+-> Call to std::async without a launch policy may not always create a new thread.
+    -> Depends on the compiler implementation.
+    -> To force std::async to execute the task asynchronously, use the async launch policy explicitly.
+-> If new thread cannot be created with async launch policy, std::system error exception is thrown.
+
+TASK ARGUMENTS AND RETURN VALUES
+
+-> Arguments can be specified in std::async for the task.
+-> By default, the arguments are passed by value.
+    -> To pass by reference, use std::cref
+-> To get a value from the task, simply return it frmo the corresponding function.
+-> This value is available through the std::future object.
+
+std::future
+
+-> Used for communication between threads.
+-> Has a shared state taht can be accessed in a different thread.
+-> Created through a std::promise object.
+    -> Created by std::async, that directly returns a furutre object.
+    -> std::promise is an input channel.
+    -> std::future is an output channel.
+-> The thread that reads the shared state will wait until the future is ready (with the shared state),
+-> Promise/future pair allow safe data sharing between threads.
