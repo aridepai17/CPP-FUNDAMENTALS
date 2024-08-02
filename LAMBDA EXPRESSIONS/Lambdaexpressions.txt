@@ -1,0 +1,38 @@
+FUNCTION OBJECTS
+
+-> Object with overloaded function call operator.
+-> Call to overloaded function call operator resembles a global function call.
+-> Can be used as a callback instead of function pointers.
+-> More efficient than function pointers.
+-> Usually implemented as structs.
+
+-> Invoked through an object.
+-> Static in nature.
+-> Must be specified in compile time.
+-> Easy to optimize.
+-> Fast.
+-> Can store state.
+
+FUNCTION POINTER 
+
+-> Invoked through a pointer.
+-> Dynamic in nature.
+-> Can be specified at runtime.
+-> Difficult to optimize.
+-> Slow.
+-> Cannot store state.
+
+LAMBDA EXPRESSIONS
+
+-> Defines an anonymous function object.
+-> Syntactic shortcut for a function object.
+-> Can be passed as an argument.
+-> Can accept parameters and return values.
+-> Typically, encapsulates a few lines of code.
+-> Behaves like a normal function when invoked.
+-> Replaces function objects.
+-> Internally, implemented as a nameless function object.
+-> Use auto to provide explicit name.
+
+SYNTAX
+[](<ARGS>)<MUTABLE> <EXCP SPECIFICATION> -> <RETURN TYPE>

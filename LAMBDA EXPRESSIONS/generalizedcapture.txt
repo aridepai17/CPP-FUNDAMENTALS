@@ -1,0 +1,10 @@
+GENERALIZED CAPTURE 
+
+-> This feature allows creation of new variables in the capture clause.
+-> The type of these variables is deduced from the type produced by th expression.
+-> Consquently, these variables must always be initialized.
+-> If the initializer expression is a variable, the new variable can have the same or different name.
+-> To create a reference, you have to use operator & before the variable name.
+
+    [var=expression](args)
+    [&var=expression](args)
