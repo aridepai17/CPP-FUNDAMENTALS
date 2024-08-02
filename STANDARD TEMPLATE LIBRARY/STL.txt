@@ -1,0 +1,75 @@
+STANDARD TEMPLATE LIBRARY
+
+-> Heart of the standard library for C++.
+-> Developed by Alexander Stepenov & Meng Lee at Hewlett Packard Labs.
+-> Provides fast and reusable containers and algorithms.
+-> Relies heavily on templates; almost every component in the STL is a template.
+
+CORE COMPONENTS 
+
+-> Container classes, algorithms, and iterators form the core components of the STL.
+-> Container classes represnt data and algorithms represent operations on the data.
+-> Iterators serve as the glue between containers and algorithms.
+-> Also includes classes for concurrency, random numbers, regular expressions, utilities, etc.
+
+WHY USE THE STL?
+
+-> Quicker development.
+-> Reliable
+-> Portable
+-> Efficient and fast.
+-> Accurate
+-> Readable code.
+-> Lower maintenance cost.
+
+COMMON FUNCTIONS
+
+-> Default constructor
+-> Uniform initialization constructor
+-> Copy constructor
+-> Iterator constructor
+-> size()
+-> begin()
+-> end()
+-> clear()
+-> Default allocator
+
+std::array 
+-> Thin wrapper over C-style static array.
+-> Supports iterators
+-> Knows about its size
+-> Provides random access
+-> Can be used with C functions.
+-> Cannot grow
+
+Iterators
+-> Pointer like objects
+-> Used to access elements by their position.
+-> Provide overloaded operators, such as ++, --, *, ->, etc.
+-> Created through begin() and end() functions in all containers.
+
+std::vector
+-> Behaves like a dynamic array.
+-> Grows automatically.
+-> Efficient for addition/removal at the end.
+-> Provides random access.
+-> Not good for insertion/deletion.
+
+std::deque
+-> Efficient for addition/removal at both ends.
+-> Grows automatically.
+-> Provides random access.
+-> Not good for insertion/deletion.
+
+std::list
+-> Implemented as a two-way linked list.
+-> Efficient for insertion/deletion at any position.
+-> Does not provide random access.
+
+std::forward_list
+-> Implemented as a one-way linked list.
+-> Small memory footprint.
+-> Efficient for insertion/deletion.
+-> Does not provide support for size.
+-> Elements are added at the front.
+
