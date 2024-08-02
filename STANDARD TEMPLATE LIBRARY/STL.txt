@@ -73,3 +73,19 @@ std::forward_list
 -> Does not provide support for size.
 -> Elements are added at the front.
 
+std::set / std::multi_set
+-> Implemented as a binary tree.
+-> Elements are stored in sorted order.
+-> Value acts as key.
+-> Fast search.
+-> No random access.
+-> Elements cannot be modified directly.
+
+std::map / std::multi_map
+-> Implemented as a binary tree.
+-> Stores a pair that contains a key and a value.
+-> Elements are stored in sorted order based on key.
+-> Fast search.
+-> No random access.
+-> Keys cannot be modified directly.
+

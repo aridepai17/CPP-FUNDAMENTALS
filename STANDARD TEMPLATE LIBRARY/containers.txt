@@ -1,0 +1,25 @@
+UNORDERED CONTAINERS
+-> Associative containers implemented as hash tables.
+-> Values are hashed and stored in undefined order.
+-> Fast search, insertion/deletion, but may degrade over a period of time.
+-> std::unordered_set stores values that act as keys for hashing.
+-> std::unordered_map stores pairs ( first is used to compute hash )
+-> Iterators are constant.
+-> Load factor = Entries / Capacity
+
+COMPLEXITY
+-> Amount of time taken by an algorithm to run for input of size n.
+-> Commonly, represented through Big-O notation
+    -> O(1) - represents constant time.
+    -> O(n) - represents linear time.
+-> Gives a rough idea about the performance of an algorithm.
+-> Useful for large input size
+
+SUMMARY 
+
+-> Use vector for random access, but not insertion and deletion.
+-> Deque is preferable when elements need to be inserted and removed from both the ends.
+-> Use list if frequent insertions and deletions are required
+    -> Use forward_list for memory constrained systems.
+-> Use associative containers if lookup/search is important.
+-> Favour unordered containers if elemetns need not be ordered, else use set/map.
