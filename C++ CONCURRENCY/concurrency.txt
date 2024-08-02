@@ -53,3 +53,13 @@ std::future
     -> std::future is an output channel.
 -> The thread that reads the shared state will wait until the future is ready (with the shared state),
 -> Promise/future pair allow safe data sharing between threads.
+
+Promise
+
+-> Provides a way to store a value or an exception.
+-> This is called the shared state.
+-> This state can be accessed later from another thread through a future object.
+-> promise/future are two endpoints of a communication channel.
+-> One operation stores a value in a promise and the other operation will retrieve it through a future asynchronously.
+-> These operations are synchronized, therefore, thread-safe.
+-> promise object can be used only once.
