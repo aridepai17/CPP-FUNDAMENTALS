@@ -1,0 +1,29 @@
+USER OBJECTS AND CONTAINERS 
+
+-> Compiler may define certain rules for user defined objects if they have to be stored in containers.
+-> These are mostly about certain operators that have to be overloaded for the user objects.
+-> Generally, your objects should have the following operators overloaded :<>!= ==
+-> These operators are used by various containers for sorting and searching.
+-> Not always required.
+
+ALGORITHMS 
+
+-> STL provides algorithms for common tasks
+    -> Sorting, removing, searching , numeric, etc
+-> More optimized than handwritten loops.
+-> Work with all containers regardless of the data type.
+-> Several algorithms can be customized through user-defined operations.
+-> Some containers provide specialized versions of algorithms.
+   -> list provides sort and remove.
+   -> associative containers provide lower_bound, upper_bound, find, etc.
+-> Algorithms reside in the <algorithm> header file.
+
+CONTAINER CHANGES 
+
+-> All member functions taht create an itereator are noexcept.
+-> New member functions, such as emplace(),emplace_back(),emplace_front() in containers, support for brace list initialization.
+-> Contianers are move aware and will prefer move over copy.
+-> In std::vector, new functions were added - data(), shrink_to_fit()
+-> std::erase added for sequence containers.
+-> Associative containers got new functions - emplace_hint(), extract(), contains() 
+
