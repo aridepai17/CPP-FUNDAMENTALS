@@ -1,0 +1,58 @@
+CLASS TEMPLATE ARGUMENT DEDUCTION 
+
+-> Template argument deduction is aprocess by which a compiler deduces the types.
+-> Consequently, to create instances of classes with multiple template arguments, we had to resort to make_functions 
+    -> eg: make_pair
+-> Deduction works with class templates as well.
+-> This feature is called class template argument deduction. ( CTAD )
+-> There are two types - compiler generated and user defined.
+-> Works with direct or copy initialization of objects or objects on heap.
+
+FOLDING 
+
+-> It is process that applies a binary operator to a list of values recursively.
+-> The results are combined recursively, that builds up the final result.
+-> This process is called as folding.
+-> Variadic templates can persorm folds over a template parameter pack.
+-> However, it requires overloads with recursion
+    -> Needs to unpack the parameters for processing.
+
+FOLD EXPRESSIONS
+
+-> Offers a new way to unpack variadic parameteres with binary operators
+-> This is called fold expression.
+-> A fold expression reduces (folds) a parameter pack over a binary operator.
+-> This is a compact syntax for applying binary operations to the elements of a parameter pack.
+-> Simplifies implementation of variadic templates that have to apply binary operators on a parameter pack.
+
+-> The following syntax is provided for fold expressions:
+    (pack op ...) - unary right fold
+    (... op pack) - unary left fold
+    (pack op ... op init) - binary right fold
+    (init op ... op pack) - binary left fold
+
+COMPILE TIME IF 
+
+-> This feature allows the condition of an if statement to be evaluated at compile time.
+-> It also discards branches of an if statement at compile time.
+   if constexpr(condition)
+-> The expression condition must be a constant condition and it should be possible to be evaluate it at compile-time.
+-> Only the block that follows the true condition is evaluated; the else blocks become discarded statements.
+-> Note that the discarded statements must be still valid statements.
+-> It also work with initialization inside if constexpr and runtime if statements.
+-> if constexpr can be used only inside functions, not outside.
+
+std::optional
+-> A new library type that can be used when a function may or may not return a value.
+-> If it does not return a value, a common way to compare with a predefined value such as 0, nullptr, true/false, etc.
+-> This leads to different kinds of checks for different types.
+-> std::optional<T> can represent a type that may or may not contain a value.
+    -> Often called a nullable type.
+
+Properties include -
+-> No value is represented by std::nullopt.
+-> std::optional is a value type - so, it can be copied through deep copy.
+-> Does not need to allocate any memory on heap.
+-> YOu cannot store references inside std::optional
+-> Provides several overloaded operators and functions ot access the value inside safely.
+-> May throw std::bad_optoinal_access
