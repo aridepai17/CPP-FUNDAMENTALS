@@ -1,0 +1,41 @@
+Parallel STL Algorithms
+
+-> May STL algorithms by default execute serially.
+-> Provides overlaods to these algorithms that can now execute parallelly.
+-> Algorithms that can be parallelized accept a new tempalte paramenter called execution policy.
+    -> Used to disambiiguate calls to overloads of the algorithm.
+-> This can be used to inform th algorithm if it should execute serially or parallelly.
+-> The internally implementation details are hidden to the user.
+
+SYNTAX 
+-> Parallel version fo STL algorithms have a sinple interface.
+-> They are provided as overloaded functions with the first paramenter signifying the execution policy
+-> Execution policy defines how the algorithm should execute.
+
+   std::algorithm(execution_policy, begin, end, args...);
+
+EXECUTION POLICIES
+-> All execution policies existing in <execution> header and in std::execution namespace.
+-> Each of the policy is an individual type
+    -> sequenced_policy - seq
+    -> parallel_policy - par
+    -> parallel_unsafe_policy - par_unseq
+
+NEW ALGORITHMS 
+
+-> for_each
+-> for_each_n
+-> reduce 
+-> exclusive_scan
+-> inclusive_scan
+-> transform_reduce
+-> transform_exclusive_scan
+-> transform_inclusive_scan
+
+PARALLEL ALGORITHMS EVERYWHERE?
+
+-> Backward compatibility.
+-> Can use both input & output iterators.
+-> Synchronization is expensive.
+-> Parallelized algorithms terminate on exceptions, sequenced do not.
+-> Do not give good performance for operations on small number of elements due to overhead.

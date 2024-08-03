@@ -1,0 +1,70 @@
+std::variant
+
+-> std::variant is a type-safe replacement for union type.
+-> Just like union, it uses the storage of the largest member.
+-> The first member is always default initialized if variant is default constructed.
+-> Alrernatively, you can initialize any member of the variant during construction.
+-> Members are destroyed properly.
+-> Throws bad_variant_access on invalid access.
+
+TYPE SAFETY
+-> C++ is a strongly typed language.
+-> Object are declared with a specific type and that cannot be changed later.
+-> In some cases, we may require an object that should hold values of different types.
+-> This is difficult to achieve in C++, except through void *
+-> However, such pointers ahve certain disadvantages
+    -> Not typesafe
+    -> No way to know the type
+    -> Cannot access the value in a type-safe way
+    -> Need to manage the object lifetime
+
+std::any
+
+-> A wrapper that can hold value of any arbitrary type in a type-safe way.
+-> Replacement for void *
+-> Contains both the value & its type.
+-> The value is accessed thorugh any_cast<>
+-> May allocate memory on the heap.
+-> Throws exception of type bad_any_cast on wrong type access.
+
+std::string_view
+
+-> Allows us to deal with character sequences without allocating memory.
+-> Can be considered as a kind of reference to a character sequence.
+-> Can be used where ever a non-modifiable string is required.
+-> It simply stores a pointer to the character array along with its length.
+-> It is fast and cheap ot copy.
+-> However, it should be used carefully as it can lead to bugs.
+
+PROPERTIES
+
+-> Underlying sequence is read-only.
+-> It can be accessed thorugh data() method.
+    -> may return a nullptr.
+    -> a character sequence without null terminator.
+-> You can only assign a new value, swap values and shrink it to a subset of character sequence.
+-> Character sequence is not guaranteed to be null-terminated.
+    -> Conswquently, may not work with C string functions.
+-> No allocator support.
+
+When to use std::string_view?
+-> Don't pass in functions that accept a C-style string becasue it might not have a null terminator.
+-> Do not return string view to string from a function.
+-> Do not assign temporary strings to string views.
+-> Avoid as class members.
+
+FILESYSTEM
+-> Adopted from Boost.Filesystem, it was adjusted to a new language standards and amde consistent with other parts of the library.
+-> Provides factilities for performing following operations
+    -> Manipulation of filesystem paths.
+    -> Create, move, rename, delete directories.
+    -> list contents of a given directory.
+    -> get information about path, file permissions etc 
+-> To create, read & write files, you'll still use the stream library classes.
+-> The facilities are provided in <filesystem> head er under std::filesystem namespace.
+    -> path - allows manupilation of paths that represent existing files or directories.
+    -> directory_entry - represents a path with additional information such as file size, file times, etc
+    -> directory_iterator - an iterator that iterates over the contents of a directory.
+    -> functions for working with directories and much more.
+-> Many functions will throw std::filesystem_error exception on failure.
+
