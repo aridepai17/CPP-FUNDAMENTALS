@@ -3,13 +3,13 @@ Parallel STL Algorithms
 -> May STL algorithms by default execute serially.
 -> Provides overlaods to these algorithms that can now execute parallelly.
 -> Algorithms that can be parallelized accept a new tempalte paramenter called execution policy.
-    -> Used to disambiiguate calls to overloads of the algorithm.
+    -> Used to disambiguate calls to overloads of the algorithm.
 -> This can be used to inform th algorithm if it should execute serially or parallelly.
 -> The internally implementation details are hidden to the user.
 
 SYNTAX 
 -> Parallel version fo STL algorithms have a sinple interface.
--> They are provided as overloaded functions with the first paramenter signifying the execution policy
+-> They are provided as overloaded functions with the first parameter signifying the execution policy
 -> Execution policy defines how the algorithm should execute.
 
    std::algorithm(execution_policy, begin, end, args...);
